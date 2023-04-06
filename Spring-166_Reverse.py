@@ -337,13 +337,16 @@ class compression:
                                     sda8=""
                                     Circle=0
                                     Long888=len(sda3)
-                                    Circle<Long888:
+                                    while Circle<Long888:
                                       if sda3[Circle:Circle+1]=="0":
                                         
                                         sda8=sda8+"1"
                                       if sda3[Circle:Circle+1]=="1":  
                                         sda8=sda8+"0"
                                       Circle+=1
+
+
+                                    sda3=sda8
 
                                     
                                     sda2=sda3
@@ -657,7 +660,7 @@ class compression:
                                     sda8=""
                                     Circle=0
                                     Long888=len(sda3)
-                                    Circle<Long888:
+                                    while Circle<Long888:
                                       if sda3[Circle:Circle+1]=="0":
                                         
                                         sda8=sda8+"1"
@@ -665,9 +668,9 @@ class compression:
                                         sda8=sda8+"0"
                                       Circle+=1
 
-                                    
+                                    sda3=sda8
                                     sda2=sda3
-                                    #print(sda3)
+                                    #print(len(sda3))
                                     #n = int(sda2, 2)
                                                                                                     
                                             
@@ -685,6 +688,7 @@ class compression:
                                     
                                     assxw3+=1  
                                     if len(sda2)<=100 or assxw3==((2**24)-1):
+                                        #print(Bias2)
 
                                         sda3="1"+Bias3+Bias2+sda3
                                         lenf=len(sda3)
