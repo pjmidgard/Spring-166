@@ -368,7 +368,7 @@ class compression:
                                     
                                     assxw3+=1  
                                     #print(assxw3)
-                                    if len(sda2)<=32 or assxw3==((2**24)-1):
+                                    if len(sda2)<=256 or assxw3==((2**24)-1):
 
                                        sda3="1"+Bias3+Bias2+sda3
                                        lenf=len(sda3)
@@ -687,7 +687,7 @@ class compression:
                                     #print(len(jl))
                                     
                                     assxw3+=1  
-                                    if len(sda2)<=32 or assxw3==((2**24)-1):
+                                    if len(sda2)<=256 or assxw3==((2**24)-1):
                                         #print(Bias2)
 
                                         sda3="1"+Bias3+Bias2+sda3
