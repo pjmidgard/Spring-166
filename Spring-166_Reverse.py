@@ -1,5 +1,5 @@
 from time import time
-cvf=0
+Times_change_info=0
 import os
 import binascii
 namez = input("c  for compress or e for extract: ")
@@ -24,27 +24,27 @@ class compression:
                     namem=""
                     namema="?"
                     Times_of_compression1=0
-                    blockw=5
-                    blockw1=4
-                    assxw1=0
-                    assxw2=0
-                    block2=0
-                    sda4=""
+                    
+                    
+                    Times1=0
+                    
+                    
+                    INFO4=""
                         
-                    count1=12
-                    count2=0
+                   
+                    
                     count3=0
                     count4=-1
-                    count6=0
-                    assxw1=0
-                    assxw3=0
+                   
+                    Times1=0
+                    Times3=0
                     Times_of_compression=0
-                    assxw2=0
+                    
               
 
-                    assxw=0
-                    blockw=5
-                    blockw1=4
+                    Times=0
+                    
+                    
                     name_cut=""
                     name_cut=len(".bin")
                     nameas=name
@@ -57,50 +57,50 @@ class compression:
                         
                     nameas=name[:name_long-name_cut]
                     
-                    nac=len(nameas)
+                    Save_name=len(nameas)
 
                     Times_of_compression=0
                     
                     countraz=0
-                    assxw=0
-                    cvf=2
-                    cvf1=0
+                    Times=0
+                    Times_change_info=2
+                    Times_change_info1=0
                     s=""
                     e2=0
                     e3=2
                     e4=""
                     c=2
-                    sw=2
-                    elw=0
+                    
+                    
                     count4=-1
                  
-                    sda3=""
-                    sda2=""
+                    INFO3=""
+                    INFO2=""
 
-                    sscvf=0
+                    ssTimes_change_info=0
                     
-                    qqqqwzl=0
+                    
 
                     block=2
-                    block2=0
+                    
 
                     count_time_of_copression=0
                     countraz=0
-                    cvf=2
-                    cvf1=0
+                    Times_change_info=2
+                    Times_change_info1=0
                     s=""
                     e2=0
                     e3=2
                     e4=""
                     c=2
-                    sw=2
-                    elw=0
+                    
+                    
                        
-                    sda3=""
+                    INFO3=""
 
-                    sscvf=0
+                    ssTimes_change_info=0
                         
-                    qqqqwzl=0
+                    
 
                     block=0
 
@@ -128,16 +128,16 @@ class compression:
                         
             
                   
-                        lenf1=len(data)
-                        lenf5=len(data)
+                        long_file1=len(data)
+                        long_file5=len(data)
                         
             
                   
                         
-                        if lenf1>((2**32)-1)+((2**24)-1):
+                        if long_file1>((2**32)-1)+((2**24)-1):
                             print("This file is too big");
                             raise SystemExit
-                        if lenf1==0:
+                        if long_file1==0:
                             
                             raise SystemExit
 
@@ -154,7 +154,7 @@ class compression:
                 
            
                     
-                            cvf=cvf+1
+                            Times_change_info=Times_change_info+1
                             
                 
                     
@@ -162,33 +162,33 @@ class compression:
 
                             with open(nameas, "ab") as f2:
                                 if countraz==1:
-                                    sda=bin(int(binascii.hexlify(data),16))[2:]
-                                    lenf=len(sda)
-                                    lenf1=len(data)
+                                    INFO=bin(int(binascii.hexlify(data),16))[2:]
+                                    long_file=len(INFO)
+                                    long_file1=len(data)
                                 
-                                    xc=(lenf1*8)-lenf
+                                    xc=(long_file1*8)-long_file
                                     z=0
                                     if xc!=0:
                                         while z<xc:
-                                            sda="0"+sda
+                                            INFO="0"+INFO
                                             z=z+1
 
       
                                     
                                     
-                                    sda=sda+sda2
+                                    INFO=INFO+INFO2
 
                                     if countraz==1:
-                                        sda2=sda
+                                        INFO2=INFO
                             
-                                    n = int(sda2, 2)
+                                    n = int(INFO2, 2)
                                 
-                                    qqwslenf=len(sda2)
-                                    qqwslenf=(qqwslenf/8)*2
-                                    qqwslenf=str(qqwslenf)
-                                    qqwslenf="%0"+qqwslenf+"x"
+                                    binary_to_data=len(INFO2)
+                                    binary_to_data=(binary_to_data/8)*2
+                                    binary_to_data=str(binary_to_data)
+                                    binary_to_data="%0"+binary_to_data+"x"
                              
-                                    jl=binascii.unhexlify(qqwslenf % n)
+                                    jl=binascii.unhexlify(binary_to_data % n)
                                     sssssw=len(jl)
                                     
                                     data=jl
@@ -202,34 +202,43 @@ class compression:
                                         
                                         
 
-                                        lenf5=len(data)
+                                        long_file5=len(data)
 
-                                    sda=bin(int(binascii.hexlify(data),16))[2:]
-                                    lenf=len(sda)
+                                    INFO=bin(int(binascii.hexlify(data),16))[2:]
+                                    long_file=len(INFO)
 
-                                    lenf1=len(data)
+                                    long_file1=len(data)
                                 
-                                    xc=(lenf1*8)-lenf
+                                    xc=(long_file1*8)-long_file
                                     z=0
                                     if xc!=0:
                                         while z<xc:
-                                            sda="0"+sda
+                                            INFO="0"+INFO
                                             z=z+1
 
 
                                     
-                                    sda2=sda
+                                    INFO2=INFO
 
-                                    lenf3=len(sda2)
-                                lenf2=len(sda2)
+                                    long_file3=len(INFO2)
+                                long_file2=len(INFO2)
                                 
                                 
                                 
-                                Long_file=int(sda2[24:56],2)
+                                Long_file=int(INFO2[32:64],2)
                                 #print(Long_file)
-                                Times_compress=int(sda2[56:80],2)
+
                                 
-                                Divide_Number=int(sda2[0:24],2)
+                                    
+                                Byte_Divide=32
+                                
+                                
+
+                                
+                                #print(Long_file)
+                                Times_compress=int(INFO2[56:88],2)
+                                
+                                Divide_Number=int(INFO2[0:32],2)
                                 #print(Divide_Number)
                                 C1="0"+str(Long_file*8)+"b"
                                 N_Start=0
@@ -239,50 +248,50 @@ class compression:
                                 Finish_file2=""
                                 
                                 Start_file=format(N_Start,C1)
-                                Finish_file1=sda2
+                                Finish_file1=INFO2
                               
                                     	#print(Start_file)
                                 
                                 while Finish_file1!=Finish_file2:
-                                    if assxw3==0:
+                                    if Times3==0:
                                     	  
                                     	  Start_file=format(N_Start,C1)
-                                    	  sda2=Start_file
+                                    	  INFO2=Start_file
                                     	  
                                     
 
                                     block3=0
-                                    sda3=""
-                                    sda5=""
-                                    sda8=""
+                                    INFO3=""
+                                    INFO5=""
+                                    INFO8=""
                                     
-                                    #sda4=""
+                                    #INFO4=""
                                     
                                     count3+=1
                                     #print(count4)
                                     #######################################################Jurijus Pacalovas Exection Program######################################################################################
-                                    #print(len(sda2))
+                                    #print(len(INFO2))
                                     F=0
                                     B=0
                                     count4=-1
                                  
-                                    lenf2=len(sda2)
-                                    #print(lenf2)
+                                    long_file2=len(INFO2)
+                                    #print(long_file2)
                                     N2=-1
                                     N1=1
                                     N5=0
                                     long2=1
                                     
-                                    N8=len(sda2)
+                                    N8=len(INFO2)
                                     while N1!=0:
                                         N2+=1
-                                        long=len(sda2)
+                                        long=len(INFO2)
                                         long2=long-N2
                                         if long2<=0:
                                             B=1
                                             N1=0
                                         if B==0:
-                                            N=int(sda2[:long-N2],2)
+                                            N=int(INFO2[:long-N2],2)
                                             if N==0:
                                                 B=1
                                                 N1=0
@@ -295,7 +304,7 @@ class compression:
                                     long61=len(Bias)
                                     long62=0
                                     if B==0:
-                                    	long62=len(sda2[long-N2:])
+                                    	long62=len(INFO2[long-N2:])
                                     NS=long61
                                     NS1=N8-long62
                                     NS2=NS1-1-long61
@@ -306,9 +315,9 @@ class compression:
                                     
                                     
                                     
-                                    C="0"+str((2**6)-1)+"b"
-                                    if assxw3==0:
-                                    	Bias2=format(N2,C)
+                                    B6="0"+str((2**6)-1)+"b"
+                                    if Times3==0:
+                                    	Bias2=format(N2,B6)
                                     	N11=Divide_Number
                                     	
                                     
@@ -325,71 +334,72 @@ class compression:
                                         
                                 
                                                             
-                                    Bias3=format(N2,C)
+                                    Bias3=format(N2,B6)
                                     	   
                                
                                     if B==0:
-                                    	sda3="1"+Bias+sda2[long-N2:]
+                                    	INFO3="1"+Bias+INFO2[long-N2:]
                                     #print(N2)
                                     if B==1:
-                                    	sda3="0"+Bias+sda2[long-N2:]
+                                    	INFO3="0"+Bias+INFO2[long-N2:]
                                     
-                                    sda8=""
+                                    INFO8=""
                                     Circle=0
-                                    Long888=len(sda3)
+                                    Long888=len(INFO3)
                                     while Circle<Long888:
-                                      if sda3[Circle:Circle+1]=="0":
+                                      if INFO3[Circle:Circle+1]=="0":
                                         
-                                        sda8=sda8+"1"
-                                      if sda3[Circle:Circle+1]=="1":  
-                                        sda8=sda8+"0"
+                                        INFO8=INFO8+"1"
+                                      if INFO3[Circle:Circle+1]=="1":  
+                                        INFO8=INFO8+"0"
                                       Circle+=1
 
 
-                                    sda3=sda8
+                                    INFO3=INFO8
 
                                     
-                                    sda2=sda3
-                                    #print(sda3)
-                                    #n = int(sda2, 2)
+                                    INFO2=INFO3
+                                    #print(INFO3)
+                                    #n = int(INFO2, 2)
                                                                                                     
                                             
-                                    #n = int(sda2, 2)                                                                                     
+                                    #n = int(INFO2, 2)                                                                                     
                                             
-                                    #qqwslenf=len(sda2)
-                                    #qqwslenf=(qqwslenf/8)*2
-                                    #qqwslenf=str(qqwslenf)
-                                    #qqwslenf="%0"+qqwslenf+"x"
-                                    #jl=binascii.unhexlify(qqwslenf % n)
+                                    #binary_to_data=len(INFO2)
+                                    #binary_to_data=(binary_to_data/8)*2
+                                    #binary_to_data=str(binary_to_data)
+                                    #binary_to_data="%0"+binary_to_data+"x"
+                                    #jl=binascii.unhexlify(binary_to_data % n)
                                     #print(len(jl))
                                     #
                                     #
                                     #print(len(jl))
                                     
-                                    assxw3+=1  
-                                    #print(assxw3)
-                                    if len(sda2)<=256 or assxw3==((2**24)-1):
+                                    Times3+=1  
+                                    #print(Times3)
+                                    if len(INFO2)<=256 or Times3==((2**24)-1):
 
-                                       sda3="1"+Bias3+Bias2+sda3
-                                       lenf=len(sda3)
+                                       INFO3="1"+Bias3+Bias2+INFO3
+                                       long_file=len(INFO3)
                                        add_bits118=""
-                                       count_bits=8-lenf%8
+                                       count_bits=8-long_file%8
                                        z=0
                                        if count_bits!=8:
                                            while z<count_bits:
                                                add_bits118="0"+add_bits118
                                                z=z+1
-                                       sda3=add_bits118+sda3
-                                       T1=format(Long_file,'032b')
-                                       T=format(assxw3,'024b')
-                                       T4=format(N11,'024b')
-                                       sda3=T4+T1+T+sda3
-                                       Finish_file2=sda3
-                                       assxw3=0
-                                       #print(assxw3)
+                                       INFO3=add_bits118+INFO3
+                                       B1=format(Long_file,'032b')
+                                       B5=format(Times3,'024b')
+                                       B7="0"+str(Byte_Divide)+"b"
+                                       B4=format(N11,B7)
+                                       INFO3=B4+B1+B5+INFO3
+                                       Finish_file2=INFO3
+                                       Times3=0
+                                       #print(Times3)
                                        if Finish_file1==Finish_file2:
-                                           sda3=Start_file
-                                           assxw=1
+                                           INFO3=Start_file
+                                           Times=1
                                        else:
                                            N_Start=N_Start+Divide_Number
 											                                                                                            
@@ -397,8 +407,8 @@ class compression:
 											                                                                                            
                                     
                                     
-                                    #print(assxw)
-                                if assxw==1:
+                                    #print(Times)
+                                if Times==1:
                                         
 
                                         
@@ -407,30 +417,30 @@ class compression:
                                         
 #######################################################Jurijus Pacalovas Exection Program######################################################################################
                                         #2**32#
-                                        #print(sda2)
+                                        #print(INFO2)
                                         #os.system("pause")
                                         
                                         
                                             
                
-                                        n = int(sda3, 2)
-                                        qqwslenf=len(sda3)
-                                        qqwslenf=(qqwslenf/8)*2
-                                        qqwslenf=str(qqwslenf)
-                                        qqwslenf="%0"+qqwslenf+"x"
-                                        jl=binascii.unhexlify(qqwslenf % n)
+                                        n = int(INFO3, 2)
+                                        binary_to_data=len(INFO3)
+                                        binary_to_data=(binary_to_data/8)*2
+                                        binary_to_data=str(binary_to_data)
+                                        binary_to_data="%0"+binary_to_data+"x"
+                                        jl=binascii.unhexlify(binary_to_data % n)
                                         #
                                         #
                                         #print(len(jl))
                                             
                                       
-                                        assxw1=1
+                                        Times1=1
                                      
                                             
                                             
-                                            #print(assxw1)
+                                            #print(Times1)
                                             
-                                        if assxw1==1:
+                                        if Times1==1:
                                         
                                                 assx=10
                                                 if assx==10:
@@ -458,25 +468,25 @@ class compression:
                         namea=""
                         namem=""
                         namema="?"
-                        block2=0
                         
-                        count1=12
-                        count2=0
+                        
+                       
+                        
                         count3=0
                         count4=-1
-                        count6=0
-                        assxw1=0
-                        assxw3=0
+                       
+                        Times1=0
+                        Times3=0
                         Times_of_compression=0
-                        assxw2=0
+                        
               
 
-                        assxw=0
-                        blockw=5
-                        blockw1=4
+                        Times=0
+                        
+                        
                         nameas=name
                         
-                        nac=len(nameas)
+                        Save_name=len(nameas)
 
                         long=len(name)
                    
@@ -484,21 +494,21 @@ class compression:
                     
                         nameas=name+".bin" 
                         countraz=0
-                        cvf=2
-                        cvf1=0
+                        Times_change_info=2
+                        Times_change_info1=0
                         s=""
                         e2=0
                         e3=2
                         e4=""
                         c=2
-                        sw=2
-                        elw=0
-                       
-                        sda3=""
-
-                        sscvf=0
                         
-                        qqqqwzl=0
+                        
+                       
+                        INFO3=""
+
+                        ssTimes_change_info=0
+                        
+                        
 
                         block=0
 
@@ -517,13 +527,25 @@ class compression:
 
                         
                             s=str(data)
-                            lenf1=len(data)
-                            lenf5=len(data)
+                            long_file1=len(data)
+                            #print(long_file1)
                             
-                            if lenf1>(2**32)-1:
+                            
+
+                            if long_file1<2**24:
+                                Long_Divide_size_of_file=2**24
+                                Byte_Divide=32
+
+                            elif long_file1<2**32:
+                                Long_Divide_size_of_file=2**32
+                                Byte_Divide=32
+                                
+                            long_file5=len(data)
+                            
+                            if long_file1>(2**32)-1:
                                 print("This file is too big");
                                 raise SystemExit
-                            if lenf1==0:
+                            if long_file1==0:
                             	raise SystemExit
                             
                             assx=0
@@ -534,56 +556,56 @@ class compression:
                                 aas1=0
                                 a1=0
                                 
-                                cvf=cvf+1
+                                Times_change_info=Times_change_info+1
                                 
                                 countraz=countraz+1
 
                                 with open(nameas, "ab") as f2:
                                     if countraz==1:
-                                        sda=bin(int(binascii.hexlify(data),16))[2:]
-                                        lenf=len(sda)
+                                        INFO=bin(int(binascii.hexlify(data),16))[2:]
+                                        long_file=len(INFO)
                                         
-                                        lenf1=len(data) 
-                                        xc=(lenf1*8)-lenf
+                                        long_file1=len(data) 
+                                        xc=(long_file1*8)-long_file
                                         z=0
                                         if xc!=0:
                                             while z<xc:
-                                                sda="0"+sda
+                                                INFO="0"+INFO
                                                 z=z+1
-                                        sda2=sda
-                                        lenf3=len(sda2)
-                                    lenf2=len(sda2)  
+                                        INFO2=INFO
+                                        long_file3=len(INFO2)
+                                    long_file2=len(INFO2)  
                                     block3=0
-                                    sda3=""
-                                    sda5=""
-                                    sda8=""
-                                    sda4=""
+                                    INFO3=""
+                                    INFO5=""
+                                    INFO8=""
+                                    INFO4=""
                                     
                                     count3+=1
                                     #print(count4)
                                     #######################################################Jurijus Pacalovas Exection Program######################################################################################
-                                    #print(len(sda2))
+                                    #print(len(INFO2))
                                     F=0
                                     B=0
                                     count4=-1
                                  
-                                    lenf2=len(sda2)
-                                    #print(lenf2)
+                                    long_file2=len(INFO2)
+                                    #print(long_file2)
                                     N2=-1
                                     N1=1
                                     N5=0
                                     long2=1
                                     
-                                    N8=len(sda2)
+                                    N8=len(INFO2)
                                     while N1!=0:
                                         N2+=1
-                                        long=len(sda2)
+                                        long=len(INFO2)
                                         long2=long-N2
                                         if long2<=0:
                                             B=1
                                             N1=0
                                         if B==0:
-                                            N=int(sda2[:long-N2],2)
+                                            N=int(INFO2[:long-N2],2)
                                             if N==0:
                                                 B=1
                                                 N1=0
@@ -596,7 +618,7 @@ class compression:
                                     long61=len(Bias)
                                     long62=0
                                     if B==0:
-                                    	long62=len(sda2[long-N2:])
+                                    	long62=len(INFO2[long-N2:])
                                     NS=long61
                                     NS1=N8-long62
                                     NS2=NS1-1-long61
@@ -607,16 +629,17 @@ class compression:
                                     
                                     
                                     
-                                    C="0"+str((2**6)-1)+"b"
-                                    if assxw3==0:
-                                    	Bias2=format(N2,C)
+                                    B6="0"+str((2**6)-1)+"b"
+                                    if Times3==0:
+                                    	Bias2=format(N2,B6)
                                     	
                                     	
                                     	
                                     	N1=1
                                     	N5=0
                                     	N6=0
-                                    	N11=2**24
+                                    	N11=Long_Divide_size_of_file
+                                    	#print(N11)
                                        
                                         
                                      
@@ -626,15 +649,15 @@ class compression:
                                     		N11-=1
                                     		#print(N11)
                                     	
-	                                    	long=len(sda2)
+	                                    	long=len(INFO2)
 	                                    
 	                                    	
-	                                    	N=int(sda2,2)
+	                                    	N=int(INFO2,2)
 	                                    	if N==0:
 	                                    		N11=1
 	                                    		N6=1	                                    
 	                                    	if N11==0:
-	                                    		N11=(2**24)-1
+	                                    		N11=(Long_Divide_size_of_file)-1
 	                                 
 	                                    	N5=N//(N11)
 	                                    	
@@ -648,67 +671,69 @@ class compression:
 	                                    	if N1==0 and N5!=0:
 	                                    		N6=1
                                                             
-                                    Bias3=format(N2,C)
+                                    Bias3=format(N2,B6)
                                     	   
                                
                                     if B==0:
-                                    	sda3="1"+Bias+sda2[long-N2:]
+                                    	INFO3="1"+Bias+INFO2[long-N2:]
                                     #print(N2)
                                     if B==1:
-                                    	sda3="0"+Bias+sda2[long-N2:]
+                                    	INFO3="0"+Bias+INFO2[long-N2:]
                                     
-                                    sda8=""
+                                    INFO8=""
                                     Circle=0
-                                    Long888=len(sda3)
+                                    Long888=len(INFO3)
                                     while Circle<Long888:
-                                      if sda3[Circle:Circle+1]=="0":
+                                      if INFO3[Circle:Circle+1]=="0":
                                         
-                                        sda8=sda8+"1"
-                                      if sda3[Circle:Circle+1]=="1":  
-                                        sda8=sda8+"0"
+                                        INFO8=INFO8+"1"
+                                      if INFO3[Circle:Circle+1]=="1":  
+                                        INFO8=INFO8+"0"
                                       Circle+=1
 
-                                    sda3=sda8
-                                    sda2=sda3
-                                    #print(len(sda3))
-                                    #n = int(sda2, 2)
+                                    INFO3=INFO8
+                                    INFO2=INFO3
+                                    #print(len(INFO3))
+                                    #n = int(INFO2, 2)
                                                                                                     
                                             
-                                    #n = int(sda2, 2)                                                                                     
+                                    #n = int(INFO2, 2)                                                                                     
                                             
-                                    #qqwslenf=len(sda2)
-                                    #qqwslenf=(qqwslenf/8)*2
-                                    #qqwslenf=str(qqwslenf)
-                                    #qqwslenf="%0"+qqwslenf+"x"
-                                    #jl=binascii.unhexlify(qqwslenf % n)
+                                    #binary_to_data=len(INFO2)
+                                    #binary_to_data=(binary_to_data/8)*2
+                                    #binary_to_data=str(binary_to_data)
+                                    #binary_to_data="%0"+binary_to_data+"x"
+                                    #jl=binascii.unhexlify(binary_to_data % n)
                                     #print(len(jl))
                                     #
                                     #
                                     #print(len(jl))
                                     
-                                    assxw3+=1  
-                                    if len(sda2)<=256 or assxw3==((2**24)-1):
+                                    Times3+=1  
+                                    if len(INFO2)<=256 or Times3==((2**24)-1):
                                         #print(Bias2)
 
-                                        sda3="1"+Bias3+Bias2+sda3
-                                        lenf=len(sda3)
+                                        INFO3="1"+Bias3+Bias2+INFO3
+                                        long_file=len(INFO3)
                                         add_bits118=""
-                                        count_bits=8-lenf%8
+                                        count_bits=8-long_file%8
                                         z=0
                                         if count_bits!=8:
                                             while z<count_bits:
                                                 add_bits118="0"+add_bits118
                                                 z=z+1
-                                        sda3=add_bits118+sda3
-                                        assxw=1
-                                        T1=format(lenf1,'032b')
-                                        T=format(assxw3,'024b')
-                                        T4=format(N11,'024b')
-                                        sda3=T4+T1+T+sda3
+                                        INFO3=add_bits118+INFO3
+                                        Times=1
+                                        B1=format(long_file1,'032b')
+                                        B5=format(Times3,'024b')
+                                        B7="0"+str(Byte_Divide)+"b"
+                                    
+                                        B4=format(N11,B7)
+                                        INFO3=B4+B1+B5+INFO3
                                     
                                     
-                                    #print(assxw)
-                                    if assxw==1:
+                                    #print(Times)
+                                    if Times==1:
                                         
 
                                         
@@ -717,30 +742,30 @@ class compression:
                                         
 #######################################################Jurijus Pacalovas Exection Program######################################################################################
                                         #2**32#
-                                        #print(sda2)
+                                        #print(INFO2)
                                         #os.system("pause")
                                         
                                         
                                             
                
-                                        n = int(sda3, 2)
-                                        qqwslenf=len(sda3)
-                                        qqwslenf=(qqwslenf/8)*2
-                                        qqwslenf=str(qqwslenf)
-                                        qqwslenf="%0"+qqwslenf+"x"
-                                        jl=binascii.unhexlify(qqwslenf % n)
+                                        n = int(INFO3, 2)
+                                        binary_to_data=len(INFO3)
+                                        binary_to_data=(binary_to_data/8)*2
+                                        binary_to_data=str(binary_to_data)
+                                        binary_to_data="%0"+binary_to_data+"x"
+                                        jl=binascii.unhexlify(binary_to_data % n)
                                         #
                                         #
                                         #print(len(jl))
                                             
                                       
-                                        assxw1=1
+                                        Times1=1
                                      
                                             
                                             
-                                            #print(assxw1)
+                                            #print(Times1)
                                             
-                                        if assxw1==1:
+                                        if Times1==1:
                                         
                                                 assx=10
                                                 if assx==10:
