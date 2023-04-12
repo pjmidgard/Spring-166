@@ -310,7 +310,7 @@ class compression:
                                     NS2=NS1-1-long61
                                     Nj=len(bin(N2)[2:])
                                     #print(N2)
-                                    if Nj>(2**6)-1:
+                                    if Nj>(2**64)-1:
                                         B=1
                                     
                                     
@@ -624,7 +624,7 @@ class compression:
                                     NS2=NS1-1-long61
                                     Nj=len(bin(N2)[2:])
                                     #print(N2)
-                                    if Nj>(2**6)-1:
+                                    if Nj>(2**64)-1:
                                         B=1
                                     
                                     
