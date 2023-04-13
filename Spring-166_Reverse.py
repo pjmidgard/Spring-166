@@ -700,7 +700,7 @@ class compression:
                                     
                                     Minus1=len(INFO2)
                                     INFO5=Bias+INFO2[long-N2:]
-                                    print(len(INFO5))
+                                    #print(len(INFO5))
                                     Minus1_1=int(INFO5,2)
                                     Minus1-=2
                                     C1="0"+str(Minus1)+"b"
