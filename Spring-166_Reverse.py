@@ -342,9 +342,9 @@ class compression:
                                     INFO5=Bias+INFO2[long-N2:]
                                     #print(len(INFO5))
                                     Minus1_1=int(INFO5,2)
-                                    Minus1-=2
+                                    Minus1-=3
                                     C1="0"+str(Minus1)+"b"
-                                    C2="0"+str(Minus1+2)+"b"
+                                    C2="0"+str(Minus1+3)+"b"
                                     INFO4=format(Minus1_1,C1)
                                     INFO6=format(Minus1_1,C2)
                                     Minus1_1_1=len(INFO4)
@@ -403,7 +403,7 @@ class compression:
                                     
                                     Times3+=1  
                                     #print(Times3)
-                                    if len(INFO2)<=256 or Times3==((2**8)-1):
+                                    if len(INFO2)<=256 or Times3==((2**32)-1):
 
                                        INFO3="1"+Bias3+Bias2+INFO3
                                        long_file=len(INFO3)
@@ -703,9 +703,9 @@ class compression:
                                     INFO5=Bias+INFO2[long-N2:]
                                     #print(len(INFO5))
                                     Minus1_1=int(INFO5,2)
-                                    Minus1-=2
+                                    Minus1-=3
                                     C1="0"+str(Minus1)+"b"
-                                    C2="0"+str(Minus1+2)+"b"
+                                    C2="0"+str(Minus1+3)+"b"
                                     INFO4=format(Minus1_1,C1)
                                     INFO6=format(Minus1_1,C2)
                                     Minus1_1_1=len(INFO4)
@@ -753,7 +753,7 @@ class compression:
                                     #print(len(jl))
                                     
                                     Times3+=1  
-                                    if len(INFO2)<=256 or Times3==((2**8)-1):
+                                    if len(INFO2)<=256 or Times3==((2**32)-1):
                                         #print(Bias2)
 
                                         INFO3="1"+Bias3+Bias2+INFO3
