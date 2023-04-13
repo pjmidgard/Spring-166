@@ -396,7 +396,7 @@ class compression:
                                     
                                     Times3+=1  
                                     #print(Times3)
-                                    if len(INFO2)<=256 or Times3==((2**24)-1) or N11==1:
+                                    if len(INFO2)<=256 or Times3==((2**32)-1) or N11==1:
 
                                        INFO3="1"+Bias3+Bias2+INFO3
                                        long_file=len(INFO3)
