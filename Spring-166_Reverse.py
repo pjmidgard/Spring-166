@@ -134,7 +134,7 @@ class compression:
             
                   
                         
-                        if long_file1>((2**32)-1)+((2**32)-1):
+                        if long_file1>((2**32)-1)+((2**24)-1):
                             print("This file is too big");
                             raise SystemExit
                         if long_file1==0:
@@ -162,7 +162,7 @@ class compression:
 
                             with open(nameas, "ab") as f2:
                                 if countraz==1:
-                                    INFO=bin(int(binascii.hexlify(data),16))[2:]
+                                    INFO=bin(int(binascii.hexlify(data),16))[2:]#data to binary
                                     long_file=len(INFO)
                                     long_file1=len(data)
                                 
@@ -335,13 +335,32 @@ class compression:
                                 
                                                             
                                     Bias3=format(N2,B6)
+                                    
+                                    Minus1=len(INFO2)
+                                    INFO5=Bias+INFO2[long-N2:]
+                                    Minus1_1=int(INFO5,2)
+                                    Minus1-=2
+                                    C1="0"+str(Minus1)+"b"
+                                    INFO4=format(Minus1_1,C1)
+                                    Minus1_1_1=len(INFO4)
+                                    if Minus1==Minus1_1_1 and B==0:
+                                        B=0
+                                    else:
+                                        B=1
+                                        
+                                    
                                     	   
                                
-                                    if B==0:
-                                    	INFO3="1"+Bias+INFO2[long-N2:]
+                                    if B==0:#compress
+                                    	INFO3="1"+INFO4
                                     #print(N2)
-                                    if B==1:
-                                    	INFO3="0"+Bias+INFO2[long-N2:]
+                                    if B==1:#not_compress
+                                    	INFO3="0"+INFO2
+                                    
+                                    	   
+                               
+                               
+                                 
                                     
                                     INFO8=""
                                     Circle=0
@@ -377,7 +396,7 @@ class compression:
                                     
                                     Times3+=1  
                                     #print(Times3)
-                                    if len(INFO2)<=256 or Times3==((2**32)-1) or N11==1:
+                                    if len(INFO2)<=256 or Times3==((2**24)-1) or N11==1:
 
                                        INFO3="1"+Bias3+Bias2+INFO3
                                        long_file=len(INFO3)
@@ -672,13 +691,27 @@ class compression:
 	                                    		N6=1
                                                             
                                     Bias3=format(N2,B6)
+                                    
+                                    Minus1=len(INFO2)
+                                    INFO5=Bias+INFO2[long-N2:]
+                                    Minus1_1=int(INFO5,2)
+                                    Minus1-=2
+                                    C1="0"+str(Minus1)+"b"
+                                    INFO4=format(Minus1_1,C1)
+                                    Minus1_1_1=len(INFO4)
+                                    if Minus1==Minus1_1_1 and B==0:
+                                        B=0
+                                    else:
+                                        B=1
+                                        
+                                    
                                     	   
                                
-                                    if B==0:
-                                    	INFO3="1"+Bias+INFO2[long-N2:]
+                                    if B==0:#compress
+                                    	INFO3="1"+INFO4
                                     #print(N2)
-                                    if B==1:
-                                    	INFO3="0"+Bias+INFO2[long-N2:]
+                                    if B==1:#not_compress
+                                    	INFO3="0"+INFO2
                                     
                                     INFO8=""
                                     Circle=0
