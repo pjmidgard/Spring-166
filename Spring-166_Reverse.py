@@ -362,7 +362,7 @@ class compression:
                                     	INFO3="1"+INFO4
                                     #print(N2)
                                     if B==1:#not_compress
-                                    	INFO3="0"+INFO2
+                                    	INFO3="0"+INFO6
                                     
                                     	   
                                
@@ -403,7 +403,7 @@ class compression:
                                     
                                     Times3+=1  
                                     #print(Times3)
-                                    if len(INFO2)<=256 or Times3==((2**32)-1) or N11==1:
+                                    if len(INFO2)<=256 or Times3==((2**8)-1):
 
                                        INFO3="1"+Bias3+Bias2+INFO3
                                        long_file=len(INFO3)
@@ -721,7 +721,7 @@ class compression:
                                     	INFO3="1"+INFO4
                                     #print(N2)
                                     if B==1:#not_compress
-                                    	INFO3="0"+INFO2
+                                    	INFO3="0"+INFO6
                                     
                                     INFO8=""
                                     Circle=0
@@ -753,7 +753,7 @@ class compression:
                                     #print(len(jl))
                                     
                                     Times3+=1  
-                                    if len(INFO2)<=256 or Times3==((2**32)-1) or N11==1:
+                                    if len(INFO2)<=256 or Times3==((2**8)-1):
                                         #print(Bias2)
 
                                         INFO3="1"+Bias3+Bias2+INFO3
