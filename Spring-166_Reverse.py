@@ -134,7 +134,7 @@ class compression:
             
                   
                         
-                        if long_file1>((2**32)-1)+((2**24)-1):
+                        if long_file1>((2**32)-1)+((2**32)-1):
                             print("This file is too big");
                             raise SystemExit
                         if long_file1==0:
@@ -236,7 +236,7 @@ class compression:
 
                                 
                                 #print(Long_file)
-                                Times_compress=int(INFO2[56:88],2)
+                                Times_compress=int(INFO2[64:96],2)
                                 
                                 Divide_Number=int(INFO2[0:32],2)
                                 #print(Divide_Number)
@@ -295,8 +295,8 @@ class compression:
                                             if N==0:
                                                 B=1
                                                 N1=0
-                                            N5=N//((2**4)-1)
-                                            N1=N%((2**4)-1)
+                                            N5=N//2
+                                            N1=N%2
                                     	#print(N2)
                                     Bias=bin(N5)[2:]
                                     if N5==0:
@@ -377,7 +377,7 @@ class compression:
                                     
                                     Times3+=1  
                                     #print(Times3)
-                                    if len(INFO2)<=256 or Times3==((2**24)-1) or N11==1:
+                                    if len(INFO2)<=256 or Times3==((2**32)-1) or N11==1:
 
                                        INFO3="1"+Bias3+Bias2+INFO3
                                        long_file=len(INFO3)
@@ -390,7 +390,7 @@ class compression:
                                                z=z+1
                                        INFO3=add_bits118+INFO3
                                        B1=format(Long_file,'032b')
-                                       B5=format(Times3,'024b')
+                                       B5=format(Times3,'032b')
                                        B7="0"+str(Byte_Divide)+"b"
                                        B4=format(N11,B7)
                                        INFO3=B4+B1+B5+INFO3
@@ -609,8 +609,8 @@ class compression:
                                             if N==0:
                                                 B=1
                                                 N1=0
-                                            N5=N//((2**4)-1)
-                                            N1=N%((2**4)-1)
+                                            N5=N//2
+                                            N1=N%2
                                     	#print(N2)
                                     Bias=bin(N5)[2:]
                                     if N5==0:
@@ -710,7 +710,7 @@ class compression:
                                     #print(len(jl))
                                     
                                     Times3+=1  
-                                    if len(INFO2)<=256 or Times3==((2**24)-1) or N11==1:
+                                    if len(INFO2)<=256 or Times3==((2**32)-1) or N11==1:
                                         #print(Bias2)
 
                                         INFO3="1"+Bias3+Bias2+INFO3
@@ -725,7 +725,7 @@ class compression:
                                         INFO3=add_bits118+INFO3
                                         Times=1
                                         B1=format(long_file1,'032b')
-                                        B5=format(Times3,'024b')
+                                        B5=format(Times3,'032b')
                                         B7="0"+str(Byte_Divide)+"b"
                                     
                                         B4=format(N11,B7)
