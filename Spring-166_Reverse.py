@@ -350,8 +350,9 @@ class compression:
                                     Minus1_1_1=len(INFO4)
                                     if Minus1==Minus1_1_1 and B==0:
                                         B=0
-                                    elif Minus1+2==Minus1_1_1+2:
+                                    else:
                                         B=1
+                                  
                                   
                                         
                                     
@@ -710,7 +711,7 @@ class compression:
                                     Minus1_1_1=len(INFO4)
                                     if Minus1==Minus1_1_1 and B==0:
                                         B=0
-                                    elif Minus1+2==Minus1_1_1+2:
+                                    else:
                                         B=1
                                   
                                     
