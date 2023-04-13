@@ -284,7 +284,7 @@ class compression:
                                     
                                     N8=len(INFO2)
                                     while N1!=0:
-                                        N2+=1
+                                        N2+=4
                                         long=len(INFO2)
                                         long2=long-N2
                                         if long2<=0:
@@ -295,8 +295,8 @@ class compression:
                                             if N==0:
                                                 B=1
                                                 N1=0
-                                            N5=N//2
-                                            N1=N%2
+                                            N5=N//8
+                                            N1=N%8
                                     	#print(N2)
                                     Bias=bin(N5)[2:]
                                     if N5==0:
@@ -334,19 +334,25 @@ class compression:
                                         
                                 
                                                             
+                                    
+                                    
                                     Bias3=format(N2,B6)
                                     
                                     Minus1=len(INFO2)
                                     INFO5=Bias+INFO2[long-N2:]
+                                    print(len(INFO5))
                                     Minus1_1=int(INFO5,2)
                                     Minus1-=2
                                     C1="0"+str(Minus1)+"b"
+                                    C2="0"+str(Minus1+2)+"b"
                                     INFO4=format(Minus1_1,C1)
+                                    INFO6=format(Minus1_1,C2)
                                     Minus1_1_1=len(INFO4)
                                     if Minus1==Minus1_1_1 and B==0:
                                         B=0
-                                    else:
+                                    elif Minus1+2==Minus1_1_1+2:
                                         B=1
+                                  
                                         
                                     
                                     	   
@@ -617,7 +623,7 @@ class compression:
                                     
                                     N8=len(INFO2)
                                     while N1!=0:
-                                        N2+=1
+                                        N2+=4
                                         long=len(INFO2)
                                         long2=long-N2
                                         if long2<=0:
@@ -628,8 +634,8 @@ class compression:
                                             if N==0:
                                                 B=1
                                                 N1=0
-                                            N5=N//2
-                                            N1=N%2
+                                            N5=N//8
+                                            N1=N%8
                                     	#print(N2)
                                     Bias=bin(N5)[2:]
                                     if N5==0:
@@ -694,16 +700,19 @@ class compression:
                                     
                                     Minus1=len(INFO2)
                                     INFO5=Bias+INFO2[long-N2:]
+                                    print(len(INFO5))
                                     Minus1_1=int(INFO5,2)
                                     Minus1-=2
                                     C1="0"+str(Minus1)+"b"
+                                    C2="0"+str(Minus1+2)+"b"
                                     INFO4=format(Minus1_1,C1)
+                                    INFO6=format(Minus1_1,C2)
                                     Minus1_1_1=len(INFO4)
                                     if Minus1==Minus1_1_1 and B==0:
                                         B=0
-                                    else:
+                                    elif Minus1+2==Minus1_1_1+2:
                                         B=1
-                                        
+                                  
                                     
                                     	   
                                
