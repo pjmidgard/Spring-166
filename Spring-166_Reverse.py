@@ -189,7 +189,7 @@ class compression:
                                     binary_to_data="%0"+binary_to_data+"x"
                              
                                     jl=binascii.unhexlify(binary_to_data % n)
-                                    sssssw=len(jl)
+                                    size_of_file_count=len(jl)
                                     
                                     data=jl
                                     Times_Plus=Times_Plus+1
