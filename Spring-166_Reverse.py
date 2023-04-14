@@ -66,9 +66,6 @@ class compression:
                     Times_change_info=2
                     Times_change_info1=0
                     s=""
-                    e2=0
-                    e3=2
-                    e4=""
                     c=2
                     
                     
@@ -89,9 +86,8 @@ class compression:
                     Times_change_info=2
                     Times_change_info1=0
                     s=""
-                    e2=0
-                    e3=2
-                    e4=""
+                                        
+                    
                     c=2
                     
                     
@@ -523,9 +519,9 @@ class compression:
                         Times_change_info=2
                         Times_change_info1=0
                         s=""
-                        e2=0
-                        e3=2
-                        e4=""
+                        
+                        
+                        
                         c=2
                         
                         
