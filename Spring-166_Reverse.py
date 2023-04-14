@@ -148,8 +148,8 @@ class compression:
                    
                         while Times_Finish<10:
                        
-                            aas1=0
-                            a1=0
+                            
+                            
 
                 
            
@@ -579,8 +579,8 @@ class compression:
                             Times_Plus=0
                             while Times_Finish<10:
                           
-                                aas1=0
-                                a1=0
+                                
+                                
                                 
                                 Times_change_info=Times_change_info+1
                                 
