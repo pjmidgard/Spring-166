@@ -232,7 +232,7 @@ class compression:
 
                                 
                                 #print(Long_file)
-                                Times_compress=int(INFO2[64:96],2)
+                                Times_compress=int(INFO2[64:112],2)
                                 
                                 Divide_Number=int(INFO2[0:32],2)
                                 #print(Divide_Number)
@@ -399,7 +399,7 @@ class compression:
                                     
                                     Times3+=1  
                                     #print(Times3)
-                                    if len(INFO2)<=256 or Times3==((2**32)-1):
+                                    if len(INFO2)<=256 or Times3==((2**48)-1):
 
                                        INFO3="1"+Bias3+Bias2+INFO3
                                        long_file=len(INFO3)
@@ -412,7 +412,7 @@ class compression:
                                                z=z+1
                                        INFO3=add_bits118+INFO3
                                        B1=format(Long_file,'032b')
-                                       B5=format(Times3,'032b')
+                                       B5=format(Times3,'048b')
                                        B7="0"+str(Byte_Divide)+"b"
                                        B4=format(N11,B7)
                                        INFO3=B4+B1+B5+INFO3
@@ -749,7 +749,7 @@ class compression:
                                     #print(len(jl))
                                     
                                     Times3+=1  
-                                    if len(INFO2)<=256 or Times3==((2**32)-1):
+                                    if len(INFO2)<=256 or Times3==((2**48)-1):
                                         #print(Bias2)
 
                                         INFO3="1"+Bias3+Bias2+INFO3
@@ -764,7 +764,7 @@ class compression:
                                         INFO3=add_bits118+INFO3
                                         Times=1
                                         B1=format(long_file1,'032b')
-                                        B5=format(Times3,'032b')
+                                        B5=format(Times3,'048b')
                                         B7="0"+str(Byte_Divide)+"b"
                                     
                                         B4=format(N11,B7)
