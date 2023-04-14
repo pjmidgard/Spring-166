@@ -141,12 +141,12 @@ class compression:
                             
                             raise SystemExit
 
-                        assx=0
-                        qqqwz=0
+                        Times_Finish=0
+                        Times_Plus=0
                         
             
                    
-                        while assx<10:
+                        while Times_Finish<10:
                        
                             aas1=0
                             a1=0
@@ -192,7 +192,7 @@ class compression:
                                     sssssw=len(jl)
                                     
                                     data=jl
-                                    qqqwz=qqqwz+1
+                                    Times_Plus=Times_Plus+1
                                     
                                 
                                     
@@ -468,8 +468,8 @@ class compression:
                                             
                                         if Times1==1:
                                         
-                                                assx=10
-                                                if assx==10:
+                                                Times_Finish=10
+                                                if Times_Finish==10:
                                                        
 
                                                        
@@ -574,10 +574,10 @@ class compression:
                             if long_file1==0:
                             	raise SystemExit
                             
-                            assx=0
+                            Times_Finish=0
                             
-                            qqqwz=0
-                            while assx<10:
+                            Times_Plus=0
+                            while Times_Finish<10:
                           
                                 aas1=0
                                 a1=0
@@ -810,8 +810,8 @@ class compression:
                                             
                                         if Times1==1:
                                         
-                                                assx=10
-                                                if assx==10:
+                                                Times_Finish=10
+                                                if Times_Finish==10:
                                                        
 
                                                        
