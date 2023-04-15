@@ -5,7 +5,7 @@ import binascii
 namez = input("c  for compress or e for extract: ")
 #@Author Jurijus Pacalovas
 class compression:
-    def cryptograpy_compression(self):
+    def cryptograpy_unpack(self):
                 
 
         
@@ -479,7 +479,7 @@ class compression:
                            
     
             
-    def cryptograpy_unpack(self):                       
+    def cryptograpy_compression(self):                       
                     if namez=="c":
                         name = input("What is name of file? ")
                         if os.path.exists(name):
@@ -831,11 +831,8 @@ class compression:
 
 d=compression()
 
-
-  
-xw=d.cryptograpy_compression()
-print(xw)
-
-
 xw1=d.cryptograpy_unpack()
 print(xw1)
+
+xw=d.cryptograpy_compression()
+print(xw)
