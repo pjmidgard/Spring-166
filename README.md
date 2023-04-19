@@ -8,5 +8,3 @@ Spring-166_Jurijus_Pacalovas Algorithm: divide by long of bytes and move 1 bias 
 Bias, Divide move and Reverse.
 Made by Jurijus Pacalovas
 For Quantum Computer 2050 year.
-
-Future program 
