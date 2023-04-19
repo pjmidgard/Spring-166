@@ -279,8 +279,11 @@ class compression:
                                     long2=1
                                     
                                     N8=len(INFO2)
+                                    long_file14=N8+1
                                     while N1!=0:
-                                        N2+=4
+                                        N2+=1
+                                        long_file14-=1
+                                        
                                         long=len(INFO2)
                                         long2=long-N2
                                         if long2<=0:
@@ -291,8 +294,8 @@ class compression:
                                             if N==0:
                                                 B=1
                                                 N1=0
-                                            N5=N//8
-                                            N1=N%8
+                                            N5=N//long_file14
+                                            N1=N%long_file14
                                     	#print(N2)
                                     Bias=bin(N5)[2:]
                                     if N5==0:
@@ -619,8 +622,10 @@ class compression:
                                     long2=1
                                     
                                     N8=len(INFO2)
+                                    long_file14=N8+1
                                     while N1!=0:
-                                        N2+=4
+                                        N2+=1
+                                        long_file14-=1
                                         long=len(INFO2)
                                         long2=long-N2
                                         if long2<=0:
@@ -631,8 +636,8 @@ class compression:
                                             if N==0:
                                                 B=1
                                                 N1=0
-                                            N5=N//8
-                                            N1=N%8
+                                            N5=N//long_file14
+                                            N1=N%long_file14
                                     	#print(N2)
                                     Bias=bin(N5)[2:]
                                     if N5==0:
