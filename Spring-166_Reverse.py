@@ -670,16 +670,19 @@ class compression:
                                        
                                         
                                      
-                                    
+                                       
                                     	
+                                    	long=len(INFO2)
+                                    	N=int(INFO2,2)
                                     	while N6!=1:
                                     		N11-=1
                                     		#print(N11)
                                     	
-	                                    	long=len(INFO2)
+	                                    	
 	                                    
 	                                    	
-	                                    	N=int(INFO2,2)
+	                                    	
+	                                    	#print(N)
 	                                    	if N==0:
 	                                    		N11=1
 	                                    		N6=1	                                    
