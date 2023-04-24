@@ -6,6 +6,8 @@ Example:
 How is a file looking:
 The divide number 4 bytes, size of file 4 bytes, times of compression 6 bytes, two bias moves of the 64 bits in the start and in the end and compression number.
 
+Procents of maximum Compression: 99.9999985565%
+
 Requirements Quantum Computer 1 Billion Cubits.
 
 Bias, Divide, move and reverse.
